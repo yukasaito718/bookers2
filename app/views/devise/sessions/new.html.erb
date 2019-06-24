@@ -1,0 +1,52 @@
+<!-- ログイン画面-->
+
+      <div class="container">
+
+        <p id="notice"></p>
+
+
+        <h2>Log in</h2>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+          <div class="form-group has-icon">
+            <label class="control-label" for="inputName">Name</label>
+          　<br>
+            <%= f.text_field :name, autofocus: true, id:"inputName" %>
+            <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
+          </div>
+
+          <div class="form-group has-icon">
+            <label class="control-label" for="inputEmail">Password</label>
+            <br>
+            <%= f.password_field :password, autocomplete: "off", id:"inputEmail"  %>
+            <span class="fa fa-lock form-control-icon" aria-hidden="true"></span>
+          </div>
+
+          <div class="field">
+            <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+            <label for="user_remember_me">Remember me</label>
+          </div>
+
+          <%= f.submit "Log in" %>
+          <% end %>
+
+          <a class="sign_up" href="/users/sign_up">Sign up</a><br>
+
+          <a href="/users/password/new">Forgot your password?</a><br>
+      </div>
+
+                            <footer>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-xs-3 col-xs-offset-9">
+                                <p>CopyRight Infratop.inc</p>
+                              </div>
+                            </div>
+                          </div>
+                        </footer>
+                        </body>
+
+
+
+
